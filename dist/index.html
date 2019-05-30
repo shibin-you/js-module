@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta name="viewport " content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"><meta name="format-detection" content="telephone=no,email=no,date=no,address=no"><link href="./css/action-button.css" rel="stylesheet"></head>
+
+<head>
+
+  <link rel="stylesheet" href="./css/action_button.css">
+  <title>js模块</title>
+
+<body>
+  <div class="" onclick='fn()'>测试</div>
+  <!-- <div class="actionsheet-container">
+    <div class="actionsheet-modal"></div>
+    <div class="actionsheet-bottom">
+      <div class="action-button-container clearfix">
+
+      </div>
+      <div class="actionsheet-cancel">取消</div>
+    </div>
+  </div> -->
+<script type="text/javascript" src="./js/action-button.js"></script>
+</body>
+
+<script type="text/javascript">
+  var a = new ActionButton({
+    tapHidden: true,
+    itemClick: function(item) {
+      console.log(item.index)
+    },
+    items: [{
+      img: './img/wx.png',
+      text: '微信'
+    }, {
+      img: './img/wx_circle.png',
+      text: '朋友圈'
+    }, {
+      img: './img/wx_circle.png',
+      text: '朋友圈'
+    }, {
+      img: './img/wx_circle.png',
+      text: '朋友圈'
+    }, {
+      img: './img/wx_circle.png',
+      text: '朋友圈'
+    }, {
+      img: './img/wx_circle.png',
+      text: '朋友圈'
+    }]
+  })
+
+  function fn() {
+    a.show()
+  }
+</script>
+
+</html>

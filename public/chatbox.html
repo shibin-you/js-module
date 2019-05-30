@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/action-button.css">
+
+</head>
+<body>
+  <div class="chatbox">
+  <div onclick="fnShow()">action-button</div>
+  </div>
+</body>
+<script type="text/javascript" src="./js/action-button.js"></script>
+<script type="text/javascript">
+var actionButton = new ActionButton({
+  tapHidden: true,
+  itemClick: function(item) {
+    console.log(item.index)
+  },
+  items: [{
+    img: './img/wx.png',
+    text: '微信'
+  }, {
+    img: './img/wx_circle.png',
+    text: '朋友圈'
+  }, {
+    img: './img/wx_circle.png',
+    text: '朋友圈'
+  }, {
+    img: './img/wx_circle.png',
+    text: '朋友圈'
+  }, {
+    img: './img/wx_circle.png',
+    text: '朋友圈'
+  }, {
+    img: './img/wx_circle.png',
+    text: '朋友圈'
+  }]
+})
+
+function fnShow() {
+  actionButton.show()
+}
+</script>
+</html>
