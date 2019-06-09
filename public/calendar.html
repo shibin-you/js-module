@@ -7,12 +7,26 @@
   <title>日历</title>
   <link rel="stylesheet" href="./css/calendar.css">
   <style media="screen">
+    .container {
+      padding: 20px 0;
+    }
 
+    .button {
+      line-height: 40px;
+      margin: 0 50px;
+      border-radius: 20px;
+      background: red;
+      color: #fff;
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
-  <div onclick="show()">显示日历</div>
+  <div class="container">
+    <div class="button" onclick="fnShow()">显示日历</div>
+
+  </div>
   <!-- <div class="calendar">
     <div class="calendar-bottom">
       <div class="calendar-header">
@@ -72,16 +86,17 @@
     specialDates: [{
       date: '2019/05/23',
       text: '放假',
-      heghLight: true
     }, {
       date: '2020/01/01',
       text: '元旦'
     }],
+    autoHide:true,
     itemClick: function(item) {
       console.log(item)
     }
   })
-  function show() {
+
+  function fnShow() {
     calendar.show()
   }
 </script>

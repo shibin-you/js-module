@@ -133,6 +133,9 @@ class Calendar {
         if (typeof u.opts.itemClick === 'function') {
           u.opts.itemClick.call(u, date)
         }
+        if(u.opts.autoHide){
+          u.hide()
+        }
       }
     }
   }

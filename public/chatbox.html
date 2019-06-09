@@ -5,17 +5,30 @@
   <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
   <title>Document</title>
   <link rel="stylesheet" href="./css/action-button.css">
+<style media="screen">
+.container {
+  padding: 20px 0;
+}
 
+.button {
+  line-height: 40px;
+  margin: 0 50px;
+  border-radius: 20px;
+  background: red;
+  color: #fff;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-  <div class="chatbox">
-  <div onclick="fnShow()">action-button</div>
-  </div>
+  <div class="container">
+    <div class="button" onclick="fnShow()">显示弹出菜单</div>
+</div>
 </body>
 <script type="text/javascript" src="./js/action-button.js"></script>
 <script type="text/javascript">
 var actionButton = new ActionButton({
-  tapHidden: true,
+  tapHidden: true,//点击
   itemClick: function(item) {
     console.log(item.index)
   },
