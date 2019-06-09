@@ -138,6 +138,9 @@ class Calendar {
   }
   _resolveSpecial(date) {
     let specialDates = this.opts.specialDates;
+    if(!specialDates){
+      return ''
+    }
     let tpl = ''
     for (let i = 0; i < specialDates.length; i++) {
       let specialDate = getDate(specialDates[i].date)
