@@ -29,15 +29,21 @@ class ActionButton {
     }
 
     for (let i = 0; i < this.itemsEl.length; i++) {
-      this.itemsEl[i].onclick = (e) => {
-        e.stopPropagation()
+      this.itemsEl[i].onclick = () => {
         opts.itemClick.call(this, {
           index: i,
           ...opts[i]
         })
+        console.log(opts.autoHide)
+        if(opts.autoHide){
+          this.hidden()
+        }
       }
     }
     if (opts.tapHidden) {
+      this.actionBottom.onclick=function(e){
+        e.stopPropagation()
+      }
       this.el.onclick = this.cancelBtn.onclick
     }
   }
